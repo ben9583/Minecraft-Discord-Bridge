@@ -1,4 +1,4 @@
-package minedisco.discord;
+package ben9583.discord;
 
 import java.util.logging.Logger;
 
@@ -6,8 +6,8 @@ import javax.security.auth.login.LoginException;
 
 import com.github.rainestormee.jdacommand.CommandHandler;
 
-import minedisco.discord.commands.Set;
-import minedisco.discord.handler.MessageHandler;
+import ben9583.discord.commands.Set;
+import ben9583.discord.handler.MessageHandler;
 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;

@@ -1,10 +1,10 @@
-package minedisco.discord.commands.settings;
+package ben9583.discord.commands.settings;
 
 import com.github.rainestormee.jdacommand.AbstractCommand;
 import com.github.rainestormee.jdacommand.CommandAttribute;
 import com.github.rainestormee.jdacommand.CommandDescription;
 
-import minedisco.MineDisco;
+import ben9583.Ben9583;
 import net.dv8tion.jda.api.entities.Message;
 
 @CommandDescription(name = "serversaymessagestodiscord", triggers = {
@@ -14,16 +14,16 @@ public class SetServerSayMessagesToDiscord implements AbstractCommand<Message> {
 
     @Override
     public void execute(Message message, String args) {
-        if (MineDisco.getPlugin(MineDisco.class).getConfig().getBoolean("integration.serverSayMessagesToDiscord")) {
-            MineDisco.getPlugin(MineDisco.class).disableServerCommandListener();
-            MineDisco.getPlugin(MineDisco.class).getConfig().set("integration.serverSayMessagesToDiscord", false);
+        if (Ben9583.getPlugin(Ben9583.class).getConfig().getBoolean("integration.serverSayMessagesToDiscord")) {
+            Ben9583.getPlugin(Ben9583.class).disableServerCommandListener();
+            Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.serverSayMessagesToDiscord", false);
             message.getChannel().sendMessage("Server say messages integration from Minecraft to Discord disabled").queue();
         } else {
-            MineDisco.getPlugin(MineDisco.class).enableServerCommandListener();
-            MineDisco.getPlugin(MineDisco.class).getConfig().set("integration.serverSayMessagesToDiscord", true);        
+            Ben9583.getPlugin(Ben9583.class).enableServerCommandListener();
+            Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.serverSayMessagesToDiscord", true);        
             message.getChannel().sendMessage("Server say messages integration from Minecraft to Discord enabled").queue();
         }
-        MineDisco.getPlugin(MineDisco.class).saveConfig();
+        Ben9583.getPlugin(Ben9583.class).saveConfig();
     }
 
 }

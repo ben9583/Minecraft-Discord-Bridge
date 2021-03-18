@@ -1,10 +1,10 @@
-package minedisco.discord.commands.settings;
+package ben9583.discord.commands.settings;
 
 import com.github.rainestormee.jdacommand.AbstractCommand;
 import com.github.rainestormee.jdacommand.CommandAttribute;
 import com.github.rainestormee.jdacommand.CommandDescription;
 
-import minedisco.MineDisco;
+import ben9583.Ben9583;
 import net.dv8tion.jda.api.entities.Message;
 
 @CommandDescription(name = "deathmessages", triggers = { "deathmessages",
@@ -14,16 +14,16 @@ public class SetDeathMessagesToDiscord implements AbstractCommand<Message> {
 
     @Override
     public void execute(Message message, String args) {
-        if (MineDisco.getPlugin(MineDisco.class).getConfig().getBoolean("integration.deathMessagesToDiscord")) {
-            MineDisco.getPlugin(MineDisco.class).disablePlayerDeathListener();
-            MineDisco.getPlugin(MineDisco.class).getConfig().set("integration.deathMessagesToDiscord", false);
+        if (Ben9583.getPlugin(Ben9583.class).getConfig().getBoolean("integration.deathMessagesToDiscord")) {
+            Ben9583.getPlugin(Ben9583.class).disablePlayerDeathListener();
+            Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.deathMessagesToDiscord", false);
             message.getChannel().sendMessage("Player death messages disabled").queue();
         } else {
-            MineDisco.getPlugin(MineDisco.class).enablePlayerDeathListener();
-            MineDisco.getPlugin(MineDisco.class).getConfig().set("integration.deathMessagesToDiscord", true);        
+            Ben9583.getPlugin(Ben9583.class).enablePlayerDeathListener();
+            Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.deathMessagesToDiscord", true);        
             message.getChannel().sendMessage("Player death messages enabled").queue();
         }
-        MineDisco.getPlugin(MineDisco.class).saveConfig();
+        Ben9583.getPlugin(Ben9583.class).saveConfig();
     }
 
 }

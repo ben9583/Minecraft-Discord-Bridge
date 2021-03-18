@@ -1,6 +1,6 @@
-package minedisco.discord;
+package ben9583.discord;
 
-import minedisco.MineDisco;
+import ben9583.Ben9583;
 
 /**
  *
@@ -16,12 +16,12 @@ public class DiscordBotSettings {
      *
      */
     public DiscordBotSettings() {
-        discordChannelID = MineDisco.getPlugin(MineDisco.class).getConfig().getString("discord.channelID");
-        enabledDiscordtoMinecraftChat = MineDisco.getPlugin(MineDisco.class).getConfig()
+        discordChannelID = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.channelID");
+        enabledDiscordtoMinecraftChat = Ben9583.getPlugin(Ben9583.class).getConfig()
                 .getBoolean("integration.discordToMinecraftChat");
-        commandPrefix = MineDisco.getPlugin(MineDisco.class).getConfig().getString("discord.commandPrefix");
-        requestAccessChannelID = MineDisco.getPlugin(MineDisco.class).getConfig().getString("discord.requestAccessChannelID");
-        channelRoleID = MineDisco.getPlugin(MineDisco.class).getConfig().getString("discord.syncedChannelRoleID");
+        commandPrefix = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.commandPrefix");
+        requestAccessChannelID = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.requestAccessChannelID");
+        channelRoleID = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.syncedChannelRoleID");
     }
 
     /**
@@ -37,8 +37,8 @@ public class DiscordBotSettings {
      */
     public static void setCommandPrefix(String newCommandPrefix) {
         commandPrefix = newCommandPrefix;
-        MineDisco.getPlugin(MineDisco.class).getConfig().set("discord.commandPrefix", commandPrefix);
-        MineDisco.getPlugin(MineDisco.class).saveConfig();
+        Ben9583.getPlugin(Ben9583.class).getConfig().set("discord.commandPrefix", commandPrefix);
+        Ben9583.getPlugin(Ben9583.class).saveConfig();
     }
 
     /**
@@ -55,9 +55,9 @@ public class DiscordBotSettings {
      */
     public static void setEnabledDiscordtoMinecraftChat(boolean newEnabledDiscordtoMinecraftChat) {
         enabledDiscordtoMinecraftChat = newEnabledDiscordtoMinecraftChat;
-        MineDisco.getPlugin(MineDisco.class).getConfig().set("integration.discordToMinecraftChat",
+        Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.discordToMinecraftChat",
                 enabledDiscordtoMinecraftChat);
-        MineDisco.getPlugin(MineDisco.class).saveConfig();
+        Ben9583.getPlugin(Ben9583.class).saveConfig();
     }
 
     /**
@@ -72,8 +72,8 @@ public class DiscordBotSettings {
      */
     public static void setDiscordChannelID(String newDiscordChannelID) {
         discordChannelID = newDiscordChannelID;
-        MineDisco.getPlugin(MineDisco.class).getConfig().set("discord.channelID", discordChannelID);
-        MineDisco.getPlugin(MineDisco.class).saveConfig();
+        Ben9583.getPlugin(Ben9583.class).getConfig().set("discord.channelID", discordChannelID);
+        Ben9583.getPlugin(Ben9583.class).saveConfig();
     }
 
     /**
@@ -99,8 +99,8 @@ public class DiscordBotSettings {
      */
     public static void setChannelRoleID(String newChannelRoleID) {
         channelRoleID = newChannelRoleID;
-        MineDisco.getPlugin(MineDisco.class).getConfig().set("discord.syncedChannelRoleID", channelRoleID);
-        MineDisco.getPlugin(MineDisco.class).saveConfig();
+        Ben9583.getPlugin(Ben9583.class).getConfig().set("discord.syncedChannelRoleID", channelRoleID);
+        Ben9583.getPlugin(Ben9583.class).saveConfig();
     }
 
     /**
@@ -126,8 +126,8 @@ public class DiscordBotSettings {
      */
     public static void setRequestAccessChannelID(String newDiscordChannelID) {
         requestAccessChannelID = newDiscordChannelID;
-        MineDisco.getPlugin(MineDisco.class).getConfig().set("discord.requestAccessChannelID", requestAccessChannelID);
-        MineDisco.getPlugin(MineDisco.class).saveConfig();
+        Ben9583.getPlugin(Ben9583.class).getConfig().set("discord.requestAccessChannelID", requestAccessChannelID);
+        Ben9583.getPlugin(Ben9583.class).saveConfig();
     }
 
     /**

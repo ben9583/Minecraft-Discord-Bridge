@@ -1,4 +1,4 @@
-package minedisco.discord.handler;
+package ben9583.discord.handler;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -14,8 +14,8 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import minedisco.MineDisco;
-import minedisco.discord.DiscordBotSettings;
+import ben9583.Ben9583;
+import ben9583.discord.DiscordBotSettings;
 
 public class MessageHandler extends ListenerAdapter {
     private static final ThreadGroup THREADGROUP = new ThreadGroup("Executor");
@@ -36,9 +36,9 @@ public class MessageHandler extends ListenerAdapter {
             }
 
             if (event.getChannelType().equals(ChannelType.PRIVATE) && !event.getMessage().getContentStripped().isEmpty()
-                && MineDisco.getPlugin(MineDisco.class).isLoginListenerEnabled()) {
+                && Ben9583.getPlugin(Ben9583.class).isLoginListenerEnabled()) {
                  if (event.getMessage().getContentStripped().trim().length() > 3 && event.getMessage().getContentStripped().trim().length() < 6) {
-                    String m = MineDisco.getPlugin(MineDisco.class).getWhiteListHandler().authFromDiscord(event.getMessage().getContentStripped(), event.getAuthor().getId());               
+                    String m = Ben9583.getPlugin(Ben9583.class).getWhiteListHandler().authFromDiscord(event.getMessage().getContentStripped(), event.getAuthor().getId());               
                     event.getChannel().sendMessage(m).queue();
                     if (DiscordBotSettings.requestAccessChannelIsSet() && event.getMessage().getContentStripped().trim().length() == 5 ) {
                         event.getJDA().getTextChannelById(DiscordBotSettings.getRequestAccessID())
@@ -48,7 +48,7 @@ public class MessageHandler extends ListenerAdapter {
                         .queue(msg -> {                           
                             msg.addReaction("U+1F44D").queue(); 
                             msg.addReaction("U+1F44E").queue();
-                            MineDisco.getPlugin(MineDisco.class).getWhiteListHandler().setAccessVoteMessageID(event.getAuthor().getId(), msg.getId());
+                            Ben9583.getPlugin(Ben9583.class).getWhiteListHandler().setAccessVoteMessageID(event.getAuthor().getId(), msg.getId());
                         });
                     }
                 } 
@@ -82,11 +82,11 @@ public class MessageHandler extends ListenerAdapter {
 
             if (event.getChannel().getId().equals(DiscordBotSettings.getDiscordChannelID()) && !event.getMessage().getContentStripped().isEmpty()) {
                 if (event.getMessage().isWebhookMessage()) {
-                    MineDisco.getPlugin(MineDisco.class).getServer()
+                    Ben9583.getPlugin(Ben9583.class).getServer()
                             .broadcastMessage(ChatColor.DARK_AQUA + "<" + event.getAuthor().getName() + "> "
                                     + ChatColor.WHITE + event.getMessage().getContentStripped());
                 } else {
-                    MineDisco.getPlugin(MineDisco.class).getServer()
+                    Ben9583.getPlugin(Ben9583.class).getServer()
                             .broadcastMessage(ChatColor.DARK_AQUA + "<" + event.getMember().getEffectiveName() + "> "
                                     + ChatColor.WHITE + event.getMessage().getContentStripped());
 
@@ -98,7 +98,7 @@ public class MessageHandler extends ListenerAdapter {
     @Override
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
         COMMANDEXECUTOR.execute(() -> {
-            if (event.getUser().isBot() || !MineDisco.getPlugin(MineDisco.class).isLoginListenerEnabled() || !DiscordBotSettings.requestAccessChannelIsSet()) {
+            if (event.getUser().isBot() || !Ben9583.getPlugin(Ben9583.class).isLoginListenerEnabled() || !DiscordBotSettings.requestAccessChannelIsSet()) {
                 return;
             }
             if (!event.isFromGuild()) {
@@ -106,9 +106,9 @@ public class MessageHandler extends ListenerAdapter {
             }
             if (event.getChannel().getId().equals(DiscordBotSettings.getRequestAccessID())) {
                 if (event.getReaction().getReactionEmote().getAsCodepoints().equalsIgnoreCase("U+1f44d")) {
-                    MineDisco.getPlugin(MineDisco.class).getWhiteListHandler().accessVote(event.getMessageId(), true, 1);
+                    Ben9583.getPlugin(Ben9583.class).getWhiteListHandler().accessVote(event.getMessageId(), true, 1);
                 } else if (event.getReaction().getReactionEmote().getAsCodepoints().equalsIgnoreCase("U+1f44e")) {
-                    MineDisco.getPlugin(MineDisco.class).getWhiteListHandler().accessVote(event.getMessageId(), false, 1);
+                    Ben9583.getPlugin(Ben9583.class).getWhiteListHandler().accessVote(event.getMessageId(), false, 1);
                 }
                
             }
@@ -118,7 +118,7 @@ public class MessageHandler extends ListenerAdapter {
     @Override
     public void onMessageReactionRemove(MessageReactionRemoveEvent event) {
         COMMANDEXECUTOR.execute(() -> {
-            if (event.getUser().isBot() || !MineDisco.getPlugin(MineDisco.class).isLoginListenerEnabled() || !DiscordBotSettings.requestAccessChannelIsSet()) {
+            if (event.getUser().isBot() || !Ben9583.getPlugin(Ben9583.class).isLoginListenerEnabled() || !DiscordBotSettings.requestAccessChannelIsSet()) {
                 return;
             }
             if (!event.isFromGuild()) {
@@ -126,9 +126,9 @@ public class MessageHandler extends ListenerAdapter {
             }
             if (event.getChannel().getId().equals(DiscordBotSettings.getRequestAccessID())) {
                 if (event.getReaction().getReactionEmote().getAsCodepoints().equalsIgnoreCase("U+1f44d")) {
-                    MineDisco.getPlugin(MineDisco.class).getWhiteListHandler().accessVote(event.getMessageId(), true, -1);
+                    Ben9583.getPlugin(Ben9583.class).getWhiteListHandler().accessVote(event.getMessageId(), true, -1);
                 } else if (event.getReaction().getReactionEmote().getAsCodepoints().equalsIgnoreCase("U+1f44e")) {
-                    MineDisco.getPlugin(MineDisco.class).getWhiteListHandler().accessVote(event.getMessageId(),false, -1);
+                    Ben9583.getPlugin(Ben9583.class).getWhiteListHandler().accessVote(event.getMessageId(),false, -1);
                 }
             }
         });        

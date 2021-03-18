@@ -1,4 +1,4 @@
-package minedisco.minecraft;
+package ben9583.minecraft;
 
 import org.bukkit.Server;
 import org.bukkit.event.EventHandler;
@@ -7,7 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 
 
-import minedisco.discord.DiscordBot;
+import ben9583.discord.DiscordBot;
 
 public class PlayerLoginListener implements Listener {
 

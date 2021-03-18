@@ -1,11 +1,11 @@
-package minedisco.minecraft;
+package ben9583.minecraft;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-import minedisco.discord.DiscordBot;
+import ben9583.discord.DiscordBot;
 
 /**
  * 

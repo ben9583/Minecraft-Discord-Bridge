@@ -1,4 +1,4 @@
-package minedisco.discord.commands.settings;
+package ben9583.discord.commands.settings;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import com.github.rainestormee.jdacommand.CommandAttribute;
 import com.github.rainestormee.jdacommand.CommandDescription;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.Role;
-import minedisco.discord.DiscordBotSettings;
+import ben9583.discord.DiscordBotSettings;
 
 @CommandDescription(name = "role", triggers = { "channelrole",
         "role" }, description = "Sets role that that have access to synced channel", attributes = {

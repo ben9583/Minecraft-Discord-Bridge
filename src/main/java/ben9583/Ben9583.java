@@ -1,20 +1,20 @@
-package minedisco;
+package ben9583;
 
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
-import minedisco.discord.DiscordBot;
-import minedisco.minecraft.ChatListener;
-import minedisco.minecraft.PlayerAdvancementListener;
-import minedisco.minecraft.PlayerJoinQuitListener;
-import minedisco.minecraft.PlayerLoginListener;
-import minedisco.minecraft.ServerCommandListener;
-import minedisco.minecraft.WhiteListHandler;
-import minedisco.minecraft.PlayerDeathListener;
+import ben9583.discord.DiscordBot;
+import ben9583.minecraft.ChatListener;
+import ben9583.minecraft.PlayerAdvancementListener;
+import ben9583.minecraft.PlayerJoinQuitListener;
+import ben9583.minecraft.PlayerLoginListener;
+import ben9583.minecraft.ServerCommandListener;
+import ben9583.minecraft.WhiteListHandler;
+import ben9583.minecraft.PlayerDeathListener;
 
 /**
  *
  */
-public final class MineDisco extends JavaPlugin {
+public final class Ben9583 extends JavaPlugin {
     private DiscordBot bot;
     private PlayerJoinQuitListener playerJoinQuitListener;
     private ChatListener chatListener;
@@ -66,7 +66,7 @@ public final class MineDisco extends JavaPlugin {
         if (this.bot != null) {
             bot.shutConnection();
         }
-        getLogger().info("MineDisco is disabled");
+        getLogger().info("Ben9583 is disabled");
     }
 
     public void enablePlayerJoinQuitListener() {

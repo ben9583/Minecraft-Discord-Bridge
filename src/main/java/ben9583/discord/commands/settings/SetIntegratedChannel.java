@@ -1,11 +1,11 @@
-package minedisco.discord.commands.settings;
+package ben9583.discord.commands.settings;
 
 import com.github.rainestormee.jdacommand.AbstractCommand;
 import com.github.rainestormee.jdacommand.CommandAttribute;
 import com.github.rainestormee.jdacommand.CommandDescription;
 import net.dv8tion.jda.api.entities.Message;
 
-import minedisco.discord.DiscordBotSettings;
+import ben9583.discord.DiscordBotSettings;
 
 @CommandDescription(name = "integratedchannel", triggers = {"integratedchannel",
         "setintegratedchannel" }, description = "Sets current channel to be integrated with Minecraft.", attributes = {

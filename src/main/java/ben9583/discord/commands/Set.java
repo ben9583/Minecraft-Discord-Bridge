@@ -1,21 +1,21 @@
-package minedisco.discord.commands;
+package ben9583.discord.commands;
 
 import com.github.rainestormee.jdacommand.AbstractCommand;
 import com.github.rainestormee.jdacommand.CommandAttribute;
 import com.github.rainestormee.jdacommand.CommandDescription;
 import com.github.rainestormee.jdacommand.CommandHandler;
 
-import minedisco.discord.DiscordBotSettings;
-import minedisco.discord.commands.settings.SetAccessRequestChannel;
-import minedisco.discord.commands.settings.SetAdvancementsToDiscord;
-import minedisco.discord.commands.settings.SetCommandPrefix;
-import minedisco.discord.commands.settings.SetDeathMessagesToDiscord;
-import minedisco.discord.commands.settings.SetDefaultRole;
-import minedisco.discord.commands.settings.SetDiscordToMinecraftChat;
-import minedisco.discord.commands.settings.SetIntegratedChannel;
-import minedisco.discord.commands.settings.SetJoinQuitMessagesToDiscord;
-import minedisco.discord.commands.settings.SetMinecraftChatToDiscord;
-import minedisco.discord.commands.settings.SetServerSayMessagesToDiscord;
+import ben9583.discord.DiscordBotSettings;
+import ben9583.discord.commands.settings.SetAccessRequestChannel;
+import ben9583.discord.commands.settings.SetAdvancementsToDiscord;
+import ben9583.discord.commands.settings.SetCommandPrefix;
+import ben9583.discord.commands.settings.SetDeathMessagesToDiscord;
+import ben9583.discord.commands.settings.SetDefaultRole;
+import ben9583.discord.commands.settings.SetDiscordToMinecraftChat;
+import ben9583.discord.commands.settings.SetIntegratedChannel;
+import ben9583.discord.commands.settings.SetJoinQuitMessagesToDiscord;
+import ben9583.discord.commands.settings.SetMinecraftChatToDiscord;
+import ben9583.discord.commands.settings.SetServerSayMessagesToDiscord;
 import net.dv8tion.jda.api.entities.Message;
 
 @CommandDescription(name = "set", triggers = { "set", "settings" }, description = "Sets bot settings.", attributes = {

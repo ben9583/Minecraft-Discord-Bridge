@@ -1,4 +1,4 @@
-package minedisco.minecraft;
+package ben9583.minecraft;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,14 +16,14 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
-import minedisco.discord.DiscordBot;
+import ben9583.discord.DiscordBot;
 
 public class WhiteListHandler {
 
     private DiscordBot bot;
     private Server server;
     private Plugin plugin;
-    private final String whitelistName = "Minedisco_Whitelist.yml";
+    private final String whitelistName = "Ben9583_Whitelist.yml";
     private static HashMap<String, String[]> firstTimeAuthTokens = new HashMap<>();
     private static HashMap<String, String[]> ipAuthTokens = new HashMap<>();
     private FileConfiguration whitelistConfig = null;

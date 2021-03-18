@@ -1,10 +1,10 @@
-package minedisco.discord.commands.settings;
+package ben9583.discord.commands.settings;
 
 import com.github.rainestormee.jdacommand.AbstractCommand;
 import com.github.rainestormee.jdacommand.CommandAttribute;
 import com.github.rainestormee.jdacommand.CommandDescription;
 
-import minedisco.MineDisco;
+import ben9583.Ben9583;
 import net.dv8tion.jda.api.entities.Message;
 
 @CommandDescription(name = "advancementstodiscord", triggers = { "advancementstodiscord",
@@ -14,16 +14,16 @@ public class SetAdvancementsToDiscord implements AbstractCommand<Message> {
 
     @Override
     public void execute(Message message, String args) {
-        if (MineDisco.getPlugin(MineDisco.class).getConfig().getBoolean("integration.advancementsToDiscord")) {
-            MineDisco.getPlugin(MineDisco.class).disablePlayerAdvancementListener();
-            MineDisco.getPlugin(MineDisco.class).getConfig().set("integration.advancementsToDiscord", false);
+        if (Ben9583.getPlugin(Ben9583.class).getConfig().getBoolean("integration.advancementsToDiscord")) {
+            Ben9583.getPlugin(Ben9583.class).disablePlayerAdvancementListener();
+            Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.advancementsToDiscord", false);
             message.getChannel().sendMessage("Advancements integration from Minecraft to Discord disabled").queue();
         } else {
-            MineDisco.getPlugin(MineDisco.class).enablePlayerAdvancementListener();
-            MineDisco.getPlugin(MineDisco.class).getConfig().set("integration.advancementsToDiscord", true);        
+            Ben9583.getPlugin(Ben9583.class).enablePlayerAdvancementListener();
+            Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.advancementsToDiscord", true);        
             message.getChannel().sendMessage("Advancements messages integration from Minecraft to Discord enabled").queue();
         }
-        MineDisco.getPlugin(MineDisco.class).saveConfig();
+        Ben9583.getPlugin(Ben9583.class).saveConfig();
     }
 
 }
