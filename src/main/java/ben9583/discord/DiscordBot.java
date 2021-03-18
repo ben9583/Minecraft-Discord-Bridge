@@ -28,21 +28,19 @@ public class DiscordBot {
   public static final DiscordBotSettings BOTSETTINGS = new DiscordBotSettings();
   private JDA jda;
   private Logger logger;
-  private String serverName;
 
   /**
    *
    * @param token
    * @param logger
    */
-  public DiscordBot(String serverName, String token, Logger logger) {
+  public DiscordBot(String token, Logger logger) {
     try {
       this.logger = logger;
       COMMANDHANDLER.registerCommands(new Set(), new Ping(), new Version());
       this.jda = JDABuilder.createDefault(token).addEventListeners(new MessageHandler(COMMANDHANDLER)).build();
       this.jda.awaitReady();
-      this.serverName = serverName;
-      sendMessageToChannel(this.serverName + ": online");
+      sendMessageToChannel(DiscordBotSettings.getServerName() + ": online");
     } catch (LoginException e) {
       this.logger.severe("Logging to the Discord was not successful. Please check, is the token valid.");
     } catch (InterruptedException e) {
@@ -113,7 +111,7 @@ public class DiscordBot {
   }
 
   public void shutConnection() {
-    sendMessageToChannelAndWait(this.serverName + ": offline");
+    sendMessageToChannelAndWait(DiscordBotSettings.getServerName() + ": offline");
     this.jda.shutdownNow();
   }
 

@@ -23,7 +23,6 @@ public final class Ben9583 extends JavaPlugin {
     private PlayerAdvancementListener playerAdvancementListener;
     private PlayerLoginListener playerLoginListener;
     private WhiteListHandler whitelistHandler;
-    private String serverName;
 
     @Override
     public void onEnable() {
@@ -33,8 +32,7 @@ public final class Ben9583 extends JavaPlugin {
         if (token.isEmpty() || "DEFAULTTOKEN".equals(token)) {
             getLogger().severe("Please write Discord Bot token to the config.yml");
         } else {
-            this.serverName = this.getConfig().getString("discord.serverName");
-            this.bot = new DiscordBot(this.serverName, token, getLogger());
+            this.bot = new DiscordBot(token, getLogger());
 
             if (this.getConfig().getBoolean("integration.joinQuitMessagesToDiscord")) {
                 enablePlayerJoinQuitListener();

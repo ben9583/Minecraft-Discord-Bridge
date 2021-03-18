@@ -11,6 +11,7 @@ public class DiscordBotSettings {
     private static String commandPrefix;
     private static boolean enabledDiscordtoMinecraftChat;
     private static String channelRoleID;
+    private static String serverName;
 
     /**
      *
@@ -22,6 +23,7 @@ public class DiscordBotSettings {
         commandPrefix = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.commandPrefix");
         requestAccessChannelID = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.requestAccessChannelID");
         channelRoleID = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.syncedChannelRoleID");
+        serverName = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.serverName");
     }
 
     /**
@@ -139,6 +141,20 @@ public class DiscordBotSettings {
             return false;
         }
         return true;
+    }
+
+    /**
+     * @param name the new name of the server
+     */
+    public static void setServerName(String name) {
+        serverName = name;
+    }
+
+    /**
+     * @return the server's name
+     */
+    public static String getServerName() {
+        return serverName;
     }
 
 }
