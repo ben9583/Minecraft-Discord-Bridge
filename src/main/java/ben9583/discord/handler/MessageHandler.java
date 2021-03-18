@@ -66,10 +66,12 @@ public class MessageHandler extends ListenerAdapter {
                 String commandString = splitMessage[0].substring(DiscordBotSettings.getCommandPrefix().length());
                 AbstractCommand<Message> command = handler.findCommand(commandString.toLowerCase());
                 if (command == null) {
+                    event.getChannel().sendMessage("Command not found :(").queue();
                     return;
                 }
 
                 if (!checkCommandExecuteRights(command, event)) {
+                    event.getChannel().sendMessage("You do not have permission to use this command :(").queue();
                     return;
                 }
 

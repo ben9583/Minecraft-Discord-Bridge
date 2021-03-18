@@ -7,6 +7,8 @@ import javax.security.auth.login.LoginException;
 import com.github.rainestormee.jdacommand.CommandHandler;
 
 import ben9583.discord.commands.Set;
+import ben9583.discord.commands.Ping;
+import ben9583.discord.commands.Version;
 import ben9583.discord.handler.MessageHandler;
 
 import net.dv8tion.jda.api.JDA;
@@ -35,7 +37,7 @@ public class DiscordBot {
   public DiscordBot(String token, Logger logger) {
     try {
       this.logger = logger;
-      COMMANDHANDLER.registerCommand(new Set());
+      COMMANDHANDLER.registerCommands(new Set(), new Ping(), new Version());
       this.jda = JDABuilder.createDefault(token).addEventListeners(new MessageHandler(COMMANDHANDLER)).build();
       this.jda.awaitReady();
       sendMessageToChannel("Server online");
