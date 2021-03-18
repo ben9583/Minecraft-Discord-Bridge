@@ -7,11 +7,11 @@ Forked from [MineDisco/Minecraft-Discord-Bot-Bukkit](https://github.com/MineDisc
 ## Features 
 * Messages from Minecraft chat can be delivered to the selected Discord channel
 * Messages from selected Discord channel can be delivered to the Minecraft Chat
-* Different types of messages can be turned off by using commands or by editing the config file 
-* Minecraft users can be authenticated using Discord 
+* Different types of messages (advancements, death messages, etc.) can be toggled to display by using commands or by editing the config file 
+* Minecraft users can be authenticated using Discord
 * Existing users vote if new user should be let in to the server on the Discord
 
-### Also following can set to be sent to the Discord channel:
+### Minecraft announcements that can be broadcast to Discord:
 * Death notices
 * Advancement messages
 * Join/quit messages (with a count of the current players online) 
@@ -36,7 +36,7 @@ Forked from [MineDisco/Minecraft-Discord-Bot-Bukkit](https://github.com/MineDisc
    - Copy URL and go to it 
    - Select server where you want the bot to join and authorize it (If you do not see server in the list, you might not be an owner of that server)
 9. Fill out the rest of the config.yml
-10. Reload the plugin (/reload in minecraft)
+10. Reload the plugin ('/reload confirm' in minecraft)
 
 ## Configuration file
 ```yml
@@ -63,7 +63,7 @@ Only Discord server owner can use these commands.
 
 | Command        | Explanation |
 | ------------- |--------------|
-| `!set integratedchannel` | **Integrates Discord channel where command was send with the Minecraft chat**|
+| `!set integratedchannel` | **Connects this Discord channel and the Minecraft chat**|
 | `!set prefix NEWPREFIX` | **Changes prefix used before commands. Default is "!"** |
 | `!set minecraftchattodiscord`  | **Enable/disable message flow from the Minecraft chat to the Discord** |
 | `!set discordtominecraftchat ` | **Enable/disable message flow from the Discord channel to the Minecraft** |
@@ -71,7 +71,7 @@ Only Discord server owner can use these commands.
 | `!set joinQuitMessagesToDiscord ` | **Enable/disable join/quit messages to the Discord channel** |
 | `!set serverSayMessagesToDiscord ` | **Enable/disable server console "say"-messages to the Discord channel** |
 | `!set advancementstodiscord ` | **Enable/disable advancement messages to the Discord channel** |
-| `!set accessrequestchannel ` | **Set channel were bot should post access voting messages** |
+| `!set accessrequestchannel ` | **Set channel were bot should post authentication requests** |
 | `!set role ROLEID ` | **Set role id which bot should add to authenticated user to get access to the other Minecraft Discord channels** |
 
 
