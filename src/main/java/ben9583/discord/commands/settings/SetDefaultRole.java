@@ -11,7 +11,7 @@ import ben9583.discord.DiscordBotSettings;
 
 @CommandDescription(name = "role", triggers = { "channelrole",
         "role" }, description = "Sets role that that have access to synced channel", attributes = {
-                @CommandAttribute(key = "OwnerOnly", value = "1") })
+                @CommandAttribute(key = "AdminOnly", value = "1") })
 public class SetDefaultRole implements AbstractCommand<Message> {
 
     @Override

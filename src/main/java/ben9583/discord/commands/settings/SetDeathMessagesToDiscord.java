@@ -9,7 +9,7 @@ import net.dv8tion.jda.api.entities.Message;
 
 @CommandDescription(name = "deathmessages", triggers = { "deathmessages",
         "death", "deadMessagesToDiscord" }, description = "Sets on/off player death messages in Discord", attributes = {
-                @CommandAttribute(key = "OwnerOnly", value = "1") })
+                @CommandAttribute(key = "AdminOnly", value = "1") })
 public class SetDeathMessagesToDiscord implements AbstractCommand<Message> {
 
     @Override

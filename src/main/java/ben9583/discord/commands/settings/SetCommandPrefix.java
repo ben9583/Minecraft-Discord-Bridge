@@ -9,7 +9,7 @@ import ben9583.discord.DiscordBotSettings;
 
 @CommandDescription(name = "commandprefix", triggers = { "commandprefix",
         "prefix" }, description = "Sets prefix for the commands.", attributes = {
-                @CommandAttribute(key = "OwnerOnly", value = "1") })
+                @CommandAttribute(key = "AdminOnly", value = "1") })
 public class SetCommandPrefix implements AbstractCommand<Message> {
 
     @Override

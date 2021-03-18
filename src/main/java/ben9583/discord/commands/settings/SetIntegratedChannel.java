@@ -9,7 +9,7 @@ import ben9583.discord.DiscordBotSettings;
 
 @CommandDescription(name = "integratedchannel", triggers = {"integratedchannel",
         "setintegratedchannel" }, description = "Sets current channel to be integrated with Minecraft.", attributes = {
-                @CommandAttribute(key = "OwnerOnly", value = "1"), 
+                @CommandAttribute(key = "AdminOnly", value = "1"),
                 @CommandAttribute(key = "canUseOnAnyChannel", value = "1") })
 public class SetIntegratedChannel implements AbstractCommand<Message> {
 

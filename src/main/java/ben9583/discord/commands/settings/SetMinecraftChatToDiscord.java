@@ -9,7 +9,7 @@ import net.dv8tion.jda.api.entities.Message;
 
 @CommandDescription(name = "minecraftchattodiscord", triggers = {
         "minetodiscord", "minecraftchattodiscord" }, description = "Sets on/off chat integration from Minecraft to Discord.", attributes = {
-                @CommandAttribute(key = "OwnerOnly", value = "1") })
+                @CommandAttribute(key = "AdminOnly", value = "1") })
 public class SetMinecraftChatToDiscord implements AbstractCommand<Message> {
 
     @Override

@@ -17,9 +17,10 @@ import ben9583.discord.commands.settings.SetJoinQuitMessagesToDiscord;
 import ben9583.discord.commands.settings.SetMinecraftChatToDiscord;
 import ben9583.discord.commands.settings.SetServerSayMessagesToDiscord;
 import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.Permission;
 
 @CommandDescription(name = "set", triggers = { "set", "settings" }, description = "Sets bot settings.", attributes = {
-        @CommandAttribute(key = "OwnerOnly", value = "1") })
+        @CommandAttribute(key = "AdminOnly", value = "1") })
 public class Set implements AbstractCommand<Message> {
 
     private static final CommandHandler<Message> SETTINGSHANDLER = new CommandHandler<>();;
@@ -53,6 +54,9 @@ public class Set implements AbstractCommand<Message> {
 
     private boolean checkCommandExecuteRights(AbstractCommand<Message> command, Message message) {
         if (command.hasAttribute("OwnerOnly") && !message.getMember().isOwner()) {
+            return false;
+        }
+        if(command.hasAttribute("AdminOnly") && !message.getMember().hasPermission(Permission.ADMINISTRATOR)) {
             return false;
         }
 

@@ -9,7 +9,7 @@ import net.dv8tion.jda.api.entities.Message;
 
 @CommandDescription(name = "serversaymessagestodiscord", triggers = {
         "saytodiscord", "serverSayMessagesToDiscord" }, description = "Sets on/off server say messages integration to Discord", attributes = {
-                @CommandAttribute(key = "OwnerOnly", value = "1") })
+                @CommandAttribute(key = "AdminOnly", value = "1") })
 public class SetServerSayMessagesToDiscord implements AbstractCommand<Message> {
 
     @Override

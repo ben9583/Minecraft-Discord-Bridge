@@ -9,7 +9,7 @@ import ben9583.discord.DiscordBotSettings;
 
 @CommandDescription(name = "AccessRequestChannel", triggers = {"accessrequestchannel",
         "setaccessrequestchannel" }, description = "Sets current channel to be channel where Bot sends Minecraft access votes.", attributes = {
-                @CommandAttribute(key = "OwnerOnly", value = "1"), 
+                @CommandAttribute(key = "AdminOnly", value = "1"),
                 @CommandAttribute(key = "canUseOnAnyChannel", value = "1") })
 public class SetAccessRequestChannel implements AbstractCommand<Message> {
 

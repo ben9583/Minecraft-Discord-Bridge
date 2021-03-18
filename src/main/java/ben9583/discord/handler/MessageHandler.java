@@ -6,6 +6,7 @@ import java.util.concurrent.Executors;
 import com.github.rainestormee.jdacommand.AbstractCommand;
 import com.github.rainestormee.jdacommand.CommandHandler;
 
+import net.dv8tion.jda.api.Permission;
 import org.bukkit.ChatColor;
 
 import net.dv8tion.jda.api.entities.ChannelType;
@@ -137,6 +138,9 @@ public class MessageHandler extends ListenerAdapter {
 
     private boolean checkCommandExecuteRights(AbstractCommand<Message> command, MessageReceivedEvent event) {
         if (command.hasAttribute("OwnerOnly") && !event.getMember().isOwner()) {
+            return false;
+        }
+        if(command.hasAttribute("AdminOnly") && !event.getMember().hasPermission(Permission.ADMINISTRATOR)) {
             return false;
         }
 

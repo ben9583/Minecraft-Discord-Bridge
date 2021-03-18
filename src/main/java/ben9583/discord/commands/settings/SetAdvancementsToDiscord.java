@@ -9,7 +9,7 @@ import net.dv8tion.jda.api.entities.Message;
 
 @CommandDescription(name = "advancementstodiscord", triggers = { "advancementstodiscord",
         "advancements" }, description = "Sets on/off advancement messages integration to Discord", attributes = {
-                @CommandAttribute(key = "OwnerOnly", value = "1") })
+                @CommandAttribute(key = "AdminOnly", value = "1") })
 public class SetAdvancementsToDiscord implements AbstractCommand<Message> {
 
     @Override
