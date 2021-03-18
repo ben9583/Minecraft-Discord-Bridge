@@ -4,6 +4,7 @@ discord:
   requestAccessChannelID: "ACCESSREQUESTCHANNELID"
   syncedChannelRoleID: "DEFAULTROLE"
   commandPrefix: "!"
+  serverName: "My Server"
 
 integration:
   mincraftChatToDiscord: true

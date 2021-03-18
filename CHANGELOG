@@ -3,3 +3,6 @@
 
 1.3.0:
     -Made commands admin-only instead of owner-only
+    -Added 'ping' command for confirming the discord bot is listening
+    -Added 'version' command for getting the bot version
+    -Added 'set name' command for setting the server's name
