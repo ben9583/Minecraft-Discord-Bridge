@@ -6,13 +6,13 @@ public class DiscordBotSettings {
     private static String discordChannelID;
     private static String requestAccessChannelID;
     private static String commandPrefix;
-    private static boolean enabledDiscordtoMinecraftChat;
+    private static boolean enabledDiscordToMinecraftChat;
     private static String channelRoleID;
     private static String serverName;
 
     public DiscordBotSettings() {
         discordChannelID = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.channelID");
-        enabledDiscordtoMinecraftChat = Ben9583.getPlugin(Ben9583.class).getConfig()
+        enabledDiscordToMinecraftChat = Ben9583.getPlugin(Ben9583.class).getConfig()
                 .getBoolean("integration.discordToMinecraftChat");
         commandPrefix = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.commandPrefix");
         requestAccessChannelID = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.requestAccessChannelID");
@@ -39,17 +39,17 @@ public class DiscordBotSettings {
     /**
      * @return whether or not Discord chat is relayed to Minecraft
      */
-    public static boolean isEnabledDiscordtoMinecraftChat() {
-        return enabledDiscordtoMinecraftChat && discordChannelIsSet();
+    public static boolean isEnabledDiscordToMinecraftChat() {
+        return enabledDiscordToMinecraftChat && discordChannelIsSet();
     }
 
     /**
-     * @param newEnabledDiscordtoMinecraftChat whether or not Discord chat should be relayed to Minecraft
+     * @param newEnabledDiscordToMinecraftChat whether or not Discord chat should be relayed to Minecraft
      */
-    public static void setEnabledDiscordtoMinecraftChat(boolean newEnabledDiscordtoMinecraftChat) {
-        enabledDiscordtoMinecraftChat = newEnabledDiscordtoMinecraftChat;
+    public static void setEnabledDiscordToMinecraftChat(boolean newEnabledDiscordToMinecraftChat) {
+        enabledDiscordToMinecraftChat = newEnabledDiscordToMinecraftChat;
         Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.discordToMinecraftChat",
-                enabledDiscordtoMinecraftChat);
+                enabledDiscordToMinecraftChat);
         Ben9583.getPlugin(Ben9583.class).saveConfig();
     }
 
@@ -79,7 +79,7 @@ public class DiscordBotSettings {
     /**
      * @return the Discord role ID that lets members vote for authentication and view chat relays
      */
-    public static String getchannelRoleID() {
+    public static String getChannelRoleID() {
         return channelRoleID;
     }
 

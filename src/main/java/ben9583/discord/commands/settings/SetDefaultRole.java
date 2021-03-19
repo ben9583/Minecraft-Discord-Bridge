@@ -20,7 +20,7 @@ public class SetDefaultRole implements AbstractCommand<Message> {
             List<Role> role = message.getGuild().getRolesByName(args, true);
             if (!role.isEmpty()) {
                 DiscordBotSettings.setChannelRoleID(role.get(0).getId());
-                message.getChannel().sendMessage("Role is now set: " + DiscordBotSettings.getchannelRoleID()).queue();
+                message.getChannel().sendMessage("Role is now set: " + DiscordBotSettings.getChannelRoleID()).queue();
             } else {
                 message.getChannel().sendMessage("Cannot find role.").queue();
             }
