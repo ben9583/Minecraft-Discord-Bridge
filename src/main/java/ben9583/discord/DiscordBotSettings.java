@@ -2,9 +2,6 @@ package ben9583.discord;
 
 import ben9583.Ben9583;
 
-/**
- *
- */
 public class DiscordBotSettings {
     private static String discordChannelID;
     private static String requestAccessChannelID;
@@ -13,9 +10,6 @@ public class DiscordBotSettings {
     private static String channelRoleID;
     private static String serverName;
 
-    /**
-     *
-     */
     public DiscordBotSettings() {
         discordChannelID = Ben9583.getPlugin(Ben9583.class).getConfig().getString("discord.channelID");
         enabledDiscordtoMinecraftChat = Ben9583.getPlugin(Ben9583.class).getConfig()
@@ -27,14 +21,14 @@ public class DiscordBotSettings {
     }
 
     /**
-     *
+     * @return the prefix the bot listens for on Discord
      */
     public static String getCommandPrefix() {
         return commandPrefix;
     }
 
     /**
-     * @param newCommandPrefix the new prefix the bot will listen for
+     * @param newCommandPrefix the prefix the bot should listen for on Discord
      */
     public static void setCommandPrefix(String newCommandPrefix) {
         commandPrefix = newCommandPrefix;
