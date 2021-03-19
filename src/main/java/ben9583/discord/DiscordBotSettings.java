@@ -34,7 +34,7 @@ public class DiscordBotSettings {
     }
 
     /**
-     * @param newCommandPrefix
+     * @param newCommandPrefix the new prefix the bot will listen for
      */
     public static void setCommandPrefix(String newCommandPrefix) {
         commandPrefix = newCommandPrefix;
@@ -43,14 +43,14 @@ public class DiscordBotSettings {
     }
 
     /**
-     * @return
+     * @return whether or not Discord chat is relayed to Minecraft
      */
     public static boolean isEnabledDiscordtoMinecraftChat() {
         return enabledDiscordtoMinecraftChat && discordChannelIsSet();
     }
 
     /**
-     * @param newEnabledDiscordtoMinecraftChat
+     * @param newEnabledDiscordtoMinecraftChat whether or not Discord chat should be relayed to Minecraft
      */
     public static void setEnabledDiscordtoMinecraftChat(boolean newEnabledDiscordtoMinecraftChat) {
         enabledDiscordtoMinecraftChat = newEnabledDiscordtoMinecraftChat;
@@ -60,14 +60,14 @@ public class DiscordBotSettings {
     }
 
     /**
-     * @return the discordChannelID
+     * @return the Discord channel ID of where this bot will be active
      */
     public static String getDiscordChannelID() {
         return discordChannelID;
     }
 
     /**
-     * @param newDiscordChannelID the discordChannelID to set
+     * @param newDiscordChannelID the Discord channel ID of where this bot should be active
      */
     public static void setDiscordChannelID(String newDiscordChannelID) {
         discordChannelID = newDiscordChannelID;
@@ -76,21 +76,21 @@ public class DiscordBotSettings {
     }
 
     /**
-     * @return
+     * @return Whether or not the Discord channel ID of where this bot will be active is set
      */
     public static boolean discordChannelIsSet() {
         return !discordChannelID.isEmpty() && !"DEFAULTCHANNELID".equals(discordChannelID);
     }
 
     /**
-     * @return the discordChannelID
+     * @return the Discord role ID that lets members vote for authentication and view chat relays
      */
     public static String getchannelRoleID() {
         return channelRoleID;
     }
 
     /**
-     * @param newChannelRoleID the discordChannelID to set
+     * @param newChannelRoleID the Discord role ID that should let members vote for authentication and view chat relays
      */
     public static void setChannelRoleID(String newChannelRoleID) {
         channelRoleID = newChannelRoleID;
@@ -99,21 +99,21 @@ public class DiscordBotSettings {
     }
 
     /**
-     * @return
+     * @return whether or not the Discord role ID that lets members vote for authentication and view chat relays is set
      */
     public static boolean ChannelRoleIsSet() {
         return !discordChannelID.isEmpty() && !"DEFAULTROLE".equals(channelRoleID);
     }
 
     /**
-     * @return the requestAccessChannelID
+     * @return the channel where authentication requests will be put to vote on
      */
     public static String getRequestAccessID() {
         return requestAccessChannelID;
     }
 
     /**
-     * @param newDiscordChannelID the requestAccessChannelID to set
+     * @param newDiscordChannelID the channel where authentication requests should be put to vote on
      */
     public static void setRequestAccessChannelID(String newDiscordChannelID) {
         requestAccessChannelID = newDiscordChannelID;
@@ -122,7 +122,7 @@ public class DiscordBotSettings {
     }
 
     /**
-     * @return
+     * @return whether or not the channel where authentication requests will be put to vote on is set
      */
     public static boolean requestAccessChannelIsSet() {
         return !discordChannelID.isEmpty() && !"ACCESSREQUESTCHANNELID".equals(requestAccessChannelID);

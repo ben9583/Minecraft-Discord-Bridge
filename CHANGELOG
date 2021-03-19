@@ -6,3 +6,9 @@
     -Added 'ping' command for confirming the discord bot is listening
     -Added 'version' command for getting the bot version
     -Added 'set name' command for setting the server's name
+
+1.3.1:
+    -Fix some grammar mistakes on Discord and access denied messages
+    -Made server messages identified with [] instead of <> for players
+    -Add more @return and @param for better documentation
+    -Add advancements from 1.16 to be relayed
