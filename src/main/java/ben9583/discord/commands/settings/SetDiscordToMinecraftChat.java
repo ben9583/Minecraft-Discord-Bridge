@@ -1,16 +1,15 @@
 package ben9583.discord.commands.settings;
 
+import ben9583.Ben9583;
+import ben9583.discord.DiscordBotSettings;
 import com.github.rainestormee.jdacommand.AbstractCommand;
 import com.github.rainestormee.jdacommand.CommandAttribute;
 import com.github.rainestormee.jdacommand.CommandDescription;
-
-import ben9583.Ben9583;
-import ben9583.discord.DiscordBotSettings;
 import net.dv8tion.jda.api.entities.Message;
 
-@CommandDescription(name = "discordtominecraftchat", triggers = { "discordtominecraftchat",
-        "discotomine" }, description = "Sets on/off chat integration from Discord to Minecraft", attributes = {
-                @CommandAttribute(key = "AdminOnly", value = "1") })
+@CommandDescription(name = "discordtominecraftchat", triggers = {"discordtominecraftchat",
+        "discotomine"}, description = "Sets on/off chat integration from Discord to Minecraft", attributes = {
+        @CommandAttribute(key = "AdminOnly", value = "1")})
 public class SetDiscordToMinecraftChat implements AbstractCommand<Message> {
 
     @Override

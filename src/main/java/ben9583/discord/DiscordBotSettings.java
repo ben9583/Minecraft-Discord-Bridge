@@ -27,14 +27,13 @@ public class DiscordBotSettings {
     }
 
     /**
-     * 
+     *
      */
     public static String getCommandPrefix() {
         return commandPrefix;
     }
 
     /**
-     * 
      * @param newCommandPrefix
      */
     public static void setCommandPrefix(String newCommandPrefix) {
@@ -44,7 +43,6 @@ public class DiscordBotSettings {
     }
 
     /**
-     *
      * @return
      */
     public static boolean isEnabledDiscordtoMinecraftChat() {
@@ -52,7 +50,6 @@ public class DiscordBotSettings {
     }
 
     /**
-     *
      * @param newEnabledDiscordtoMinecraftChat
      */
     public static void setEnabledDiscordtoMinecraftChat(boolean newEnabledDiscordtoMinecraftChat) {
@@ -79,17 +76,13 @@ public class DiscordBotSettings {
     }
 
     /**
-     *
      * @return
      */
     public static boolean discordChannelIsSet() {
-        if (discordChannelID.isEmpty() || "DEFAULTCHANNELID".equals(discordChannelID)) {
-            return false;
-        }
-        return true;
+        return !discordChannelID.isEmpty() && !"DEFAULTCHANNELID".equals(discordChannelID);
     }
 
-        /**
+    /**
      * @return the discordChannelID
      */
     public static String getchannelRoleID() {
@@ -106,17 +99,13 @@ public class DiscordBotSettings {
     }
 
     /**
-     *
      * @return
      */
     public static boolean ChannelRoleIsSet() {
-        if (discordChannelID.isEmpty() || "DEFAULTROLE".equals(channelRoleID)) {
-            return false;
-        }
-        return true;
+        return !discordChannelID.isEmpty() && !"DEFAULTROLE".equals(channelRoleID);
     }
 
-        /**
+    /**
      * @return the requestAccessChannelID
      */
     public static String getRequestAccessID() {
@@ -133,21 +122,10 @@ public class DiscordBotSettings {
     }
 
     /**
-     *
      * @return
      */
     public static boolean requestAccessChannelIsSet() {
-        if (discordChannelID.isEmpty() || "ACCESSREQUESTCHANNELID".equals(requestAccessChannelID)) {
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * @param name the new name of the server
-     */
-    public static void setServerName(String name) {
-        serverName = name;
+        return !discordChannelID.isEmpty() && !"ACCESSREQUESTCHANNELID".equals(requestAccessChannelID);
     }
 
     /**
@@ -155,6 +133,13 @@ public class DiscordBotSettings {
      */
     public static String getServerName() {
         return serverName;
+    }
+
+    /**
+     * @param name the new name of the server
+     */
+    public static void setServerName(String name) {
+        serverName = name;
     }
 
 }

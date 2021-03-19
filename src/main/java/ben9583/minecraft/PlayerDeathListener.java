@@ -1,15 +1,14 @@
 package ben9583.minecraft;
 
+import ben9583.discord.DiscordBot;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
-import ben9583.discord.DiscordBot;
-
 public class PlayerDeathListener implements Listener {
 
-    private DiscordBot bot;
+    private final DiscordBot bot;
 
     public PlayerDeathListener(DiscordBot bot) {
         this.bot = bot;

@@ -1,13 +1,29 @@
 package ben9583.minecraft;
 
+import ben9583.discord.DiscordBot;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerAdvancementDoneEvent;
 
-import ben9583.discord.DiscordBot;
-
 public class PlayerAdvancementListener implements Listener {
+
+    private final DiscordBot bot;
+
+    public PlayerAdvancementListener(DiscordBot bot) {
+        this.bot = bot;
+    }
+
+    @EventHandler(priority = EventPriority.MONITOR)
+    public void advancementDone(PlayerAdvancementDoneEvent event) {
+        try {
+            String adv = event.getAdvancement().getKey().getNamespace().toUpperCase() + "_" + event.getAdvancement().getKey().getKey().replace('/', '_').toUpperCase();
+            bot.sendMessageToChannel(
+                    event.getPlayer().getName() + " has made the advancement [" + Advancements.valueOf(adv) + "]");
+        } catch (IllegalArgumentException e) {
+            return;
+        }
+    }
 
     public enum Advancements {
         MINECRAFT_STORY_ROOT("Minecraft"),
@@ -90,23 +106,6 @@ public class PlayerAdvancementListener implements Listener {
         public String toString() {
             return name;
         }
-    }
-
-    private DiscordBot bot;
-
-    public PlayerAdvancementListener(DiscordBot bot) {
-        this.bot = bot;
-    }
-
-    @EventHandler(priority = EventPriority.MONITOR)
-    public void advancementDone(PlayerAdvancementDoneEvent event) {
-        try {
-            String adv = event.getAdvancement().getKey().getNamespace().toUpperCase() + "_" + event.getAdvancement().getKey().getKey().replace('/', '_').toUpperCase();
-            bot.sendMessageToChannel(
-                event.getPlayer().getName() + " has made the advancement [" + Advancements.valueOf(adv) + "]");
-        } catch (IllegalArgumentException  e) {
-            return;
-        }               
     }
 
 }

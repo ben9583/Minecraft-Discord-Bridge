@@ -1,15 +1,9 @@
 package ben9583;
 
+import ben9583.discord.DiscordBot;
+import ben9583.minecraft.*;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
-import ben9583.discord.DiscordBot;
-import ben9583.minecraft.ChatListener;
-import ben9583.minecraft.PlayerAdvancementListener;
-import ben9583.minecraft.PlayerJoinQuitListener;
-import ben9583.minecraft.PlayerLoginListener;
-import ben9583.minecraft.ServerCommandListener;
-import ben9583.minecraft.WhiteListHandler;
-import ben9583.minecraft.PlayerDeathListener;
 
 /**
  *
@@ -57,7 +51,7 @@ public final class Ben9583 extends JavaPlugin {
             if (this.getConfig().getBoolean("integration.discordWhitelist")) {
                 enablePlayerLoginListener();
             }
-            
+
         }
     }
 

@@ -1,16 +1,15 @@
 package ben9583.discord.commands.settings;
 
+import ben9583.discord.DiscordBotSettings;
 import com.github.rainestormee.jdacommand.AbstractCommand;
 import com.github.rainestormee.jdacommand.CommandAttribute;
 import com.github.rainestormee.jdacommand.CommandDescription;
 import net.dv8tion.jda.api.entities.Message;
 
-import ben9583.discord.DiscordBotSettings;
-
 @CommandDescription(name = "AccessRequestChannel", triggers = {"accessrequestchannel",
-        "setaccessrequestchannel" }, description = "Sets current channel to be channel where Bot sends Minecraft access votes.", attributes = {
-                @CommandAttribute(key = "AdminOnly", value = "1"),
-                @CommandAttribute(key = "canUseOnAnyChannel", value = "1") })
+        "setaccessrequestchannel"}, description = "Sets current channel to be channel where Bot sends Minecraft access votes.", attributes = {
+        @CommandAttribute(key = "AdminOnly", value = "1"),
+        @CommandAttribute(key = "canUseOnAnyChannel", value = "1")})
 public class SetAccessRequestChannel implements AbstractCommand<Message> {
 
     @Override

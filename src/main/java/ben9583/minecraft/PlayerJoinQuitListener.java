@@ -1,5 +1,6 @@
 package ben9583.minecraft;
 
+import ben9583.discord.DiscordBot;
 import org.bukkit.Server;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -7,12 +8,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import ben9583.discord.DiscordBot;
-
 public class PlayerJoinQuitListener implements Listener {
 
-    private DiscordBot bot;
-    private Server server;
+    private final DiscordBot bot;
+    private final Server server;
 
     public PlayerJoinQuitListener(DiscordBot bot, Server server) {
         this.bot = bot;

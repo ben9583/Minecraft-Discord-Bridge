@@ -1,22 +1,20 @@
 package ben9583.minecraft;
 
+import ben9583.Ben9583;
+import ben9583.discord.DiscordBot;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.server.ServerCommandEvent;
 
-import ben9583.Ben9583;
-import ben9583.discord.DiscordBot;
-
 /**
- * 
+ *
  */
 public class ServerCommandListener implements Listener {
 
-    private DiscordBot bot;
+    private final DiscordBot bot;
 
     /**
-     * 
      * @param bot
      */
     public ServerCommandListener(DiscordBot bot) {
