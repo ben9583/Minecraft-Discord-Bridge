@@ -25,7 +25,7 @@ public class ServerCommandListener implements Listener {
     public void onServerChat(ServerCommandEvent event) {
         if (event.getCommand().toLowerCase().startsWith("say") && event.getCommand().length() >= 4 && !event.getCommand().substring(4).toLowerCase().startsWith(Ben9583
                 .getPlugin(Ben9583.class).getConfig().getString("integration.serverSayMessageFilterPrefix"))) {
-            bot.sendMessageToChannel("<Server> " + event.getCommand().substring(4));
+            bot.sendMessageToChannel("[SERVER] " + event.getCommand().substring(4));
         }
 
     }
