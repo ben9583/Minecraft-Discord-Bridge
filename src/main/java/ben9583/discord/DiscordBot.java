@@ -77,7 +77,7 @@ public class DiscordBot {
     public boolean addDefaultRoleToUser(String discordID) {
         if (DiscordBotSettings.ChannelRoleIsSet() && DiscordBotSettings.discordChannelIsSet()) {
             TextChannel textChannel = this.jda.getTextChannelById(DiscordBotSettings.getDiscordChannelID());
-            Role role = textChannel.getGuild().getRoleById(DiscordBotSettings.getchannelRoleID());
+            Role role = textChannel.getGuild().getRoleById(DiscordBotSettings.getChannelRoleID());
             if (role != null) {
                 textChannel.getGuild().addRoleToMember(discordID, role).queue();
                 return true;
@@ -91,7 +91,7 @@ public class DiscordBot {
     public boolean removeDefaultRoleToUser(String discordID) {
         if (DiscordBotSettings.ChannelRoleIsSet() && DiscordBotSettings.discordChannelIsSet()) {
             TextChannel textChannel = this.jda.getTextChannelById(DiscordBotSettings.getDiscordChannelID());
-            Role role = textChannel.getGuild().getRoleById(DiscordBotSettings.getchannelRoleID());
+            Role role = textChannel.getGuild().getRoleById(DiscordBotSettings.getChannelRoleID());
             if (role != null) {
                 textChannel.getGuild().removeRoleFromMember(discordID, role).queue();
                 return true;

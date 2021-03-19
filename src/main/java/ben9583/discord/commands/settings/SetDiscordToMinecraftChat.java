@@ -15,10 +15,10 @@ public class SetDiscordToMinecraftChat implements AbstractCommand<Message> {
     @Override
     public void execute(Message message, String args) {
         if (Ben9583.getPlugin(Ben9583.class).getConfig().getBoolean("integration.discordToMinecraftChat")) {
-            DiscordBotSettings.setEnabledDiscordtoMinecraftChat(false);
+            DiscordBotSettings.setEnabledDiscordToMinecraftChat(false);
             message.getChannel().sendMessage("Chat integration from Discord to Minecraft disabled").queue();
         } else {
-            DiscordBotSettings.setEnabledDiscordtoMinecraftChat(true);
+            DiscordBotSettings.setEnabledDiscordToMinecraftChat(true);
             message.getChannel().sendMessage("Chat integration from Discord to Minecraft enabled").queue();
         }
     }

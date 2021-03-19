@@ -77,7 +77,7 @@ public class MessageHandler extends ListenerAdapter {
                 return;
             }
 
-            if (!DiscordBotSettings.isEnabledDiscordtoMinecraftChat()) {
+            if (!DiscordBotSettings.isEnabledDiscordToMinecraftChat()) {
                 return;
             }
 
