@@ -13,4 +13,5 @@
     -Made server messages identified with [] instead of <> for players
     -Add more @return and @param for better documentation
     -Add advancements from 1.16 to be relayed
-    -Fix a bug with setting the server name from discord '!set name'
+    -'!set name' now actually sets the server name
+    -'!set name' now actually saves the server name
