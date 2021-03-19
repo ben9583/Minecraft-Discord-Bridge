@@ -19,7 +19,7 @@ public class Set implements AbstractCommand<Message> {
         SETTINGSHANDLER.registerCommands(new SetIntegratedChannel(), new SetAdvancementsToDiscord(),
                 new SetDeathMessagesToDiscord(), new SetDiscordToMinecraftChat(), new SetJoinQuitMessagesToDiscord(),
                 new SetMinecraftChatToDiscord(), new SetServerSayMessagesToDiscord(), new SetCommandPrefix(),
-                new SetAccessRequestChannel(), new SetDefaultRole());
+                new SetAccessRequestChannel(), new SetDefaultRole(), new SetServerName());
     }
 
     @Override
