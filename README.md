@@ -70,7 +70,7 @@ integration:
 ## Commands
 
 
-| Command        | Explanation | Permission Required |
+| Command        | Description | Permission Required |
 | ------------- |--------------|--------------|
 | `!set integratedchannel` | Connects this Discord channel and the Minecraft chat| Administrator |
 | `!set prefix NEWPREFIX` | Changes prefix used before commands. Default is "!" | Administrator |
@@ -83,7 +83,7 @@ integration:
 | `!set accessrequestchannel ` | Set channel were bot should post authentication requests | Administrator |
 | `!set role ROLEID ` | Set role id which bot should add to authenticated user to get access to the other Minecraft Discord channels | Administrator |
 | `!set name NAME ` | Sets the name of your server; this is how the bot will refer to this server instance on discord | Administrator |
-| `!ping` | Pong! (For debug purposes; test if your bot is listening to your messages) | Administrator |
+| `!ping [blank]/PONG` | Pong! (For debug purposes; test if your bot is listening to your messages) | Administrator |
 | `!version` | Returns the version of this plugin | Administrator |
 
 
