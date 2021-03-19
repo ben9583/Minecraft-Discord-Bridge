@@ -2,7 +2,7 @@
 
 Minecraft Bukkit plugin which integrates Minecraft to the Discord and vice versa.
 
-Forked from [MineDisco/Minecraft-Discord-Bot-Bukkit](https://github.com/MineDisco/Minecraft-Discord-Bot-Bukkit)
+Forked from [minedisco/Minecraft-Discord-Bot-Bukkit](https://github.com/MineDisco/Minecraft-Discord-Bot-Bukkit)
 
 ## Features
 
@@ -53,6 +53,7 @@ discord:
   requestAccessChannelID: "ACCESSREQUESTCHANNELID" # Discord channel id of the channel were already allowed users vote if new user should be let in to the server
   syncedChannelRoleID: "DEFAULTROLE" # Discord role id of the role that have access to integrated Discord and request voting channel 
   commandPrefix: "!" # Prefix that has to be used before bot commands
+  serverName: "My Server" # Name that appears in server reports
 
 
 integration:
@@ -68,21 +69,22 @@ integration:
 
 ## Commands
 
-Only Discord server owner can use these commands.
 
-| Command        | Explanation |
-| ------------- |--------------|
-| `!set integratedchannel` | **Connects this Discord channel and the Minecraft chat**|
-| `!set prefix NEWPREFIX` | **Changes prefix used before commands. Default is "!"** |
-| `!set minecraftchattodiscord`  | **Enable/disable message flow from the Minecraft chat to the Discord** |
-| `!set discordtominecraftchat ` | **Enable/disable message flow from the Discord channel to the Minecraft** |
-| `!set deadMessagesToDiscord` | **Enable/disable death notices to the Discord channel** |
-| `!set joinQuitMessagesToDiscord ` | **Enable/disable join/quit messages to the Discord channel** |
-| `!set serverSayMessagesToDiscord ` | **Enable/disable server console "say"-messages to the Discord channel** |
-| `!set advancementstodiscord ` | **Enable/disable advancement messages to the Discord channel** |
-| `!set accessrequestchannel ` | **Set channel were bot should post authentication requests** |
-| `!set role ROLEID ` | **Set role id which bot should add to authenticated user to get access to the other Minecraft
-Discord channels** |
+| Command        | Explanation | Permission Required |
+| ------------- |--------------|--------------|
+| `!set integratedchannel` | Connects this Discord channel and the Minecraft chat| Administrator |
+| `!set prefix NEWPREFIX` | Changes prefix used before commands. Default is "!" | Administrator |
+| `!set minecraftchattodiscord`  | Enable/disable message flow from the Minecraft chat to the Discord | Administrator |
+| `!set discordtominecraftchat ` | Enable/disable message flow from the Discord channel to the Minecraft | Administrator |
+| `!set deadMessagesToDiscord` | Enable/disable death notices to the Discord channel | Administrator |
+| `!set joinQuitMessagesToDiscord ` | Enable/disable join/quit messages to the Discord channel | Administrator |
+| `!set serverSayMessagesToDiscord ` | Enable/disable server console "say"-messages to the Discord channel | Administrator |
+| `!set advancementstodiscord ` | Enable/disable advancement messages to the Discord channel | Administrator |
+| `!set accessrequestchannel ` | Set channel were bot should post authentication requests | Administrator |
+| `!set role ROLEID ` | Set role id which bot should add to authenticated user to get access to the other Minecraft Discord channels | Administrator |
+| `!set name NAME ` | Sets the name of your server; this is how the bot will refer to this server instance on discord | Administrator |
+| `!ping` | Pong! (For debug purposes; test if your bot is listening to your messages) | Administrator |
+| `!version` | Returns the version of this plugin | Administrator |
 
 
 
