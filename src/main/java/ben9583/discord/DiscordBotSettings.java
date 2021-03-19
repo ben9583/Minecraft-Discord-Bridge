@@ -90,7 +90,7 @@ public class DiscordBotSettings {
     }
 
     /**
-     * @param newDiscordChannelID the discordChannelID to set
+     * @param newChannelRoleID the discordChannelID to set
      */
     public static void setChannelRoleID(String newChannelRoleID) {
         channelRoleID = newChannelRoleID;
