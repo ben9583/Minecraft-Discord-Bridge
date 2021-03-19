@@ -135,7 +135,11 @@ public class MessageHandler extends ListenerAdapter {
         });
     }
 
-
+    /**
+     * @param command the command who's rights should be checked
+     * @param event the event that called the command
+     * @return whether or not this command should execute
+     */
     private boolean checkCommandExecuteRights(AbstractCommand<Message> command, MessageReceivedEvent event) {
         if (command.hasAttribute("OwnerOnly") && !event.getMember().isOwner()) {
             return false;
@@ -143,6 +147,10 @@ public class MessageHandler extends ListenerAdapter {
         return !command.hasAttribute("AdminOnly") || event.getMember().hasPermission(Permission.ADMINISTRATOR);
     }
 
+    /**
+     * @param message the message to be checked
+     * @return whether or not message starts with the configured prefix
+     */
     private boolean messageHasPrefix(Message message) {
         return message.getContentDisplay().toLowerCase().startsWith(DiscordBotSettings.getCommandPrefix());
     }

@@ -42,6 +42,11 @@ public class Set implements AbstractCommand<Message> {
         SETTINGSHANDLER.execute(command, message, splitMessage.length > 1 ? splitMessage[1] : "");
     }
 
+    /**
+     * @param command the command who's rights should be checked
+     * @param message the message that called the command
+     * @return whether or not this command should execute
+     */
     private boolean checkCommandExecuteRights(AbstractCommand<Message> command, Message message) {
         if (command.hasAttribute("OwnerOnly") && !message.getMember().isOwner()) {
             return false;

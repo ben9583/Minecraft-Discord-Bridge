@@ -25,8 +25,8 @@ public class DiscordBot {
     private Logger logger;
 
     /**
-     * @param token
-     * @param logger
+     * @param token the token of this Discord bot
+     * @param logger where events will be logged
      */
     public DiscordBot(String token, Logger logger) {
         try {
@@ -43,7 +43,7 @@ public class DiscordBot {
     }
 
     /**
-     * @param message
+     * @param message the message to be sent to the configured channel
      */
     public void sendMessageToChannel(String message) {
         if (DiscordBotSettings.discordChannelIsSet()) {
@@ -59,7 +59,7 @@ public class DiscordBot {
     }
 
     /**
-     * @param message
+     * @param message the message to be sent to the configured channel
      */
     public void sendMessageToChannelAndWait(String message) {
         if (DiscordBotSettings.discordChannelIsSet()) {
@@ -74,6 +74,10 @@ public class DiscordBot {
         }
     }
 
+    /**
+     * @param discordID the ID of a discord member
+     * @return whether or not this member's role was added
+     */
     public boolean addDefaultRoleToUser(String discordID) {
         if (DiscordBotSettings.ChannelRoleIsSet() && DiscordBotSettings.discordChannelIsSet()) {
             TextChannel textChannel = this.jda.getTextChannelById(DiscordBotSettings.getDiscordChannelID());
@@ -88,6 +92,10 @@ public class DiscordBot {
         return false;
     }
 
+    /**
+     * @param discordID the ID of a discord member
+     * @return whether or not this member's role was removed
+     */
     public boolean removeDefaultRoleToUser(String discordID) {
         if (DiscordBotSettings.ChannelRoleIsSet() && DiscordBotSettings.discordChannelIsSet()) {
             TextChannel textChannel = this.jda.getTextChannelById(DiscordBotSettings.getDiscordChannelID());
