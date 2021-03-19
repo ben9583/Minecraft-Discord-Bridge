@@ -11,6 +11,6 @@ public class Ping implements AbstractCommand<Message> {
     @Override
     @SuppressWarnings("unchecked")
     public void execute(Message message, String args) {
-        message.getChannel().sendMessage("Pong!").queue();
+        message.getChannel().sendMessage(args.length() > 0 ? args : "Pong!").queue();
     }
 }
