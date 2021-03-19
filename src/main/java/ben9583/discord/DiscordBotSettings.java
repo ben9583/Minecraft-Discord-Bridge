@@ -134,6 +134,8 @@ public class DiscordBotSettings {
      */
     public static void setServerName(String name) {
         serverName = name;
+        Ben9583.getPlugin(Ben9583.class).getConfig().set("discord.serverName", serverName);
+        Ben9583.getPlugin(Ben9583.class).saveConfig();
     }
 
 }

@@ -1,5 +1,6 @@
 package ben9583.discord.commands.settings;
 
+import ben9583.Ben9583;
 import ben9583.discord.DiscordBotSettings;
 import com.github.rainestormee.jdacommand.AbstractCommand;
 import com.github.rainestormee.jdacommand.CommandAttribute;
