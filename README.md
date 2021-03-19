@@ -86,11 +86,14 @@ integration:
 | `!ping [blank]/PONG` | Pong! (For debug purposes; test if your bot is listening to your messages) | Administrator |
 | `!version` | Returns the version of this plugin | Administrator |
 
+## Build from Source
 
+If you'd like to contribute/fork, clone this repository and use the following Maven setup to build a jarfile:
 
+```sh
+git clone https://github.com/ben9583/Minecraft-Discord-Bridge.git ./Minecraft-Discord-Bridge
+cd ./Minecraft-Discord-Bridge
+mvn package
+```
 
-
-
-
-
-
+The output will be located in `target/ben9583-[version].jar` along with the `.class` files from the project.
