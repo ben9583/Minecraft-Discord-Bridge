@@ -14,10 +14,10 @@ public class SetServerName implements AbstractCommand<Message> {
     @Override
     public void execute(Message message, String args) {
         if (!args.isEmpty()) {
-            DiscordBotSettings.setCommandPrefix(args);
-            message.getChannel().sendMessage("New command prefix is: " + DiscordBotSettings.getCommandPrefix()).queue();
+            DiscordBotSettings.setServerName(args);
+            message.getChannel().sendMessage("New server name is: " + DiscordBotSettings.getServerName()).queue();
         } else {
-            message.getChannel().sendMessage("Prefix cannot be empty. Please pick valid prefix.").queue();
+            message.getChannel().sendMessage("Name cannot be empty. Please pick valid name.").queue();
         }
     }
 
