@@ -48,12 +48,12 @@ Forked from [minedisco/Minecraft-Discord-Bot-Bukkit](https://github.com/MineDisc
 
 ```yml
 discord:
-  botToken: "DEFAULTTOKEN" # Discord bots authentication token
-  channelID: "DEFAULTCHANNELID" # Discord channel id which is integrated with the Minecraft channel
-  requestAccessChannelID: "ACCESSREQUESTCHANNELID" # Discord channel id of the channel were already allowed users vote if new user should be let in to the server
-  syncedChannelRoleID: "DEFAULTROLE" # Discord role id of the role that have access to integrated Discord and request voting channel 
-  commandPrefix: "!" # Prefix that has to be used before bot commands
-  serverName: "My Server" # Name that appears in server reports
+  botToken: "DEFAULTTOKEN"                          # Discord bots authentication token
+  channelID: "DEFAULTCHANNELID"                     # Discord channel id which is integrated with the Minecraft channel
+  requestAccessChannelID: "ACCESSREQUESTCHANNELID"  # Discord channel id of the channel were already allowed users vote if new user should be let in to the server
+  syncedChannelRoleID: "DEFAULTROLE"                # Discord role id of the role that have access to integrated Discord and request voting channel 
+  commandPrefix: "!"                                # Prefix that has to be used before bot commands
+  serverName: "My Server"                           # Name that appears in server reports
 
 
 integration:
