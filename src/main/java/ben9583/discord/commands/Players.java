@@ -9,8 +9,7 @@ import org.bukkit.entity.HumanEntity;
 
 import static org.bukkit.Bukkit.getServer;
 
-@CommandDescription(name = "players", triggers = {"players"}, description = "Returns how many players are online", attributes = {
-        @CommandAttribute(key = "AdminOnly", value = "1")})
+@CommandDescription(name = "players", triggers = {"players"}, description = "Returns how many players are online", attributes = {})
 public class Players implements AbstractCommand<Message> {
     private final Server server;
 

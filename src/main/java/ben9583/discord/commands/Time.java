@@ -10,8 +10,7 @@ import java.util.List;
 
 import static org.bukkit.Bukkit.getServer;
 
-@CommandDescription(name = "time", triggers = {"time"}, description = "Returns what time it is in the server", attributes = {
-        @CommandAttribute(key = "AdminOnly", value = "1")})
+@CommandDescription(name = "time", triggers = {"time"}, description = "Returns what time it is in the server", attributes = {})
 public class Time implements AbstractCommand<Message> {
     private final Server server;
 
