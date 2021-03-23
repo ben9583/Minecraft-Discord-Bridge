@@ -13,13 +13,13 @@ public class SetMinecraftChatToDiscord implements AbstractCommand<Message> {
 
     @Override
     public void execute(Message message, String args) {
-        if (Ben9583.getPlugin(Ben9583.class).getConfig().getBoolean("integration.mincraftChatToDiscord")) {
+        if (Ben9583.getPlugin(Ben9583.class).getConfig().getBoolean("integration.minecraftChatToDiscord")) {
             Ben9583.getPlugin(Ben9583.class).disableChatListener();
-            Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.mincraftChatToDiscord", false);
+            Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.minecraftChatToDiscord", false);
             message.getChannel().sendMessage("Chat integration from Minecraft to Discord disabled").queue();
         } else {
             Ben9583.getPlugin(Ben9583.class).enableChatListener();
-            Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.mincraftChatToDiscord", true);
+            Ben9583.getPlugin(Ben9583.class).getConfig().set("integration.minecraftChatToDiscord", true);
             message.getChannel().sendMessage("Chat integration from Minecraft to Discord enabled").queue();
         }
         Ben9583.getPlugin(Ben9583.class).saveConfig();

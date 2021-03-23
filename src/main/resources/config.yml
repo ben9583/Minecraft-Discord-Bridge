@@ -7,7 +7,7 @@ discord:
   serverName: "My Server"
 
 integration:
-  mincraftChatToDiscord: true
+  minecraftChatToDiscord: true
   discordToMinecraftChat: true
   deathMessagesToDiscord: true
   joinQuitMessagesToDiscord: true

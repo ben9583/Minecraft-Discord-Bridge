@@ -57,7 +57,7 @@ discord:
 
 
 integration:
-  mincraftChatToDiscord: true       # Enables message integration from Minecraft chat to Discord channel
+  minecraftChatToDiscord: true       # Enables message integration from Minecraft chat to Discord channel
   discordToMinecraftChat: true      # Enables messages integration from Discord channel to Minecraft chat 
   deathMessagesToDiscord: true      # Enables death notices to be delivered to Discord channel
   joinQuitMessagesToDiscord: true   # Enables join/quit notices to be delivered to Discord channel

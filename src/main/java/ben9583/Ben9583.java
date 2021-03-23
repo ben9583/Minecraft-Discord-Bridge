@@ -32,7 +32,7 @@ public final class Ben9583 extends JavaPlugin {
                 enablePlayerJoinQuitListener();
             }
 
-            if (this.getConfig().getBoolean("integration.mincraftChatToDiscord")) {
+            if (this.getConfig().getBoolean("integration.minecraftChatToDiscord")) {
                 enableChatListener();
             }
 
