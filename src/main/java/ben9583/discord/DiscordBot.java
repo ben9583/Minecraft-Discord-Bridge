@@ -29,7 +29,7 @@ public class DiscordBot {
     public DiscordBot(String token, Logger logger) {
         try {
             this.logger = logger;
-            COMMANDHANDLER.registerCommands(new Set(), new Ping(), new Version(), new Players());
+            COMMANDHANDLER.registerCommands(new Set(), new Ping(), new Version(), new Players(), new Time());
             this.jda = JDABuilder.createDefault(token).addEventListeners(new MessageHandler(COMMANDHANDLER)).build();
             this.jda.awaitReady();
             sendMessageToChannel(DiscordBotSettings.getServerName() + ": online");
