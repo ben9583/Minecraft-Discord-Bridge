@@ -2,7 +2,7 @@
 
 Minecraft Bukkit plugin which integrates Minecraft to the Discord and vice versa.
 
-Forked from [minedisco/Minecraft-Discord-Bot-Bukkit](https://github.com/MineDisco/Minecraft-Discord-Bot-Bukkit)
+Forked from [MineDisco/Minecraft-Discord-Bot-Bukkit](https://github.com/MineDisco/Minecraft-Discord-Bot-Bukkit)
 
 ## Features
 
