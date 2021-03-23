@@ -21,6 +21,7 @@
     -Added 'time' to get what time it is on the server
     -Lowered privilege requirement for many commands
     -Allow Minecraft users to ping discord players
+    -Fix typo in config.yml 'mincraft' at 'mincraftChatToDiscord' (<----- CONFIG UPDATE)
 
 Potential Future Additions:
     -Ability to whisper between bot DM and specific player
