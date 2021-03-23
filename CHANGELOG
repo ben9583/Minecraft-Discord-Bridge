@@ -15,3 +15,12 @@
     -Add advancements from 1.16 to be relayed
     -'!set name' now actually sets the server name
     -'!set name' now actually saves the server name
+
+1.4.0 (UPCOMING):
+    -Added 'players' command for getting how many players are online
+    -Added 'time' to get what time it is on the server
+    -Lowered privilage requirement for many commands
+    -Allow Minecraft users to ping discord players
+
+Potential Future Additions:
+    -Ability to whisper between bot DM and specific player
