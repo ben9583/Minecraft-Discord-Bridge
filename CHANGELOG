@@ -19,7 +19,7 @@
 1.4.0 (UPCOMING):
     -Added 'players' command for getting how many players are online
     -Added 'time' to get what time it is on the server
-    -Lowered privilage requirement for many commands
+    -Lowered privilege requirement for many commands
     -Allow Minecraft users to ping discord players
 
 Potential Future Additions:
