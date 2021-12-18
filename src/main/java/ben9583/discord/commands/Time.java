@@ -25,9 +25,13 @@ public class Time implements AbstractCommand<Message> {
             message.getChannel().sendMessage("There is no world running from which to get the time!").queue();
             return;
         }
-        long time = worlds.get(0).getTime();
+        long time = (worlds.get(0).getTime() + 6000) % 24000;
         int hours = (int)(time / 1000);
         int minutes = (int)((time % 1000) / 60);
-        message.getChannel().sendMessage("The time is " + time + " (" + hours + ":" + minutes + ") in " + worlds.get(0).getName()).queue();
+        String partOfDay = hours / 12 == 1 ? "PM" : "AM";
+        hours = ((hours - 1) % 12) + 1;
+        if(hours == 0) { hours = 12; }
+        String minutesFormatted = minutes < 10 ? "0" + minutes : "" + minutes;
+        message.getChannel().sendMessage("The time is " + time + " (" + hours + ":" + minutesFormatted + " " + partOfDay + ") in " + worlds.get(0).getName()).queue();
     }
 }
