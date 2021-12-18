@@ -54,6 +54,7 @@ public class DiscordBot {
         } else {
             this.logger.warning("You have not set integrated Discord channel ID.");
         }
+        //jda.
     }
 
     /**

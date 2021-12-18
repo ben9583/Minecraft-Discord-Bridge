@@ -88,7 +88,7 @@ public class MessageHandler extends ListenerAdapter {
                                     + ChatColor.WHITE + event.getMessage().getContentStripped());
                 } else {
                     Ben9583.getPlugin(Ben9583.class).getServer()
-                            .broadcastMessage(ChatColor.DARK_AQUA + "<" + event.getMember().getEffectiveName() + "> "
+                            .broadcastMessage(ChatColor.DARK_AQUA + "<" + event.getMember().getUser().getName() + "> "
                                     + ChatColor.WHITE + event.getMessage().getContentStripped());
 
                 }
