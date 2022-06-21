@@ -10,6 +10,6 @@ public class Version implements AbstractCommand<Message> {
     @Override
     @SuppressWarnings("unchecked")
     public void execute(Message message, String args) {
-        message.getChannel().sendMessage("Running version 1.4.0").queue();
+        message.getChannel().sendMessage("Running version 1.4.1").queue();
     }
 }
